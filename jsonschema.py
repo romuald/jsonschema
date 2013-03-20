@@ -1219,7 +1219,7 @@ def _types_msg(instance, types):
             reprs.append(repr(type["name"]))
         except Exception:
             reprs.append(repr(type))
-    return "%r is not of type %s" % (instance, ", ".join(reprs))
+    return "%s is not of type %s" % (json.dumps(instance), ", ".join(reprs))
 
 
 def _flatten(suitable_for_isinstance):
